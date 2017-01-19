@@ -5,6 +5,9 @@
        - docker
        - python2-pip
        - python2
+  service:
+    name: docker
+    enabled: yes
 
 - name: install pip packages for ansible
   pip: name= "{{ item }}" executable=/usr/bin/pip2
@@ -19,3 +22,4 @@
     src: https://github.com/jwilder/docker-gen/releases/download/0.7.3/docker-gen-linux-amd64-0.7.3.tar.gz
     dest: /usr/local/bin/
     remote_src: True
+
